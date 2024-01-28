@@ -1,14 +1,20 @@
-import CatBox from './components/CatBox'
+import CatBox from './components/CatBox';
+import CatBox2 from './components/CatBox2';
+import CatController from './components/CatController';
 // import { BearBox } from './components/BearBox'
-import './App.css'
+import './App.css';
 
 function App() {
-  return (
-    <div className='container'>
-      <h2>zustand</h2>
-      <CatBox/>
-    </div>
-  )
+	return (
+		<div className="container">
+			<h1>Zustand</h1>
+			<div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+				<CatBox />
+				<CatBox2 />
+        <CatController/>
+			</div>
+		</div>
+	);
 }
 
-export default App
+export default App;

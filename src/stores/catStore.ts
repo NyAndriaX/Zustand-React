@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
+import { createSelectors } from '../utils/createSelectors';
 
 type TCatStoreState = {
 	cats: {
@@ -11,7 +12,7 @@ type TCatStoreState = {
   summary: () => void;
 };
 
-export const useCatStore = create<TCatStoreState>()(
+export const useCatStore = createSelectors( create<TCatStoreState>()(
 	immer((set, get) => ({
 		cats: {
 			bigCats: 0,
@@ -30,7 +31,7 @@ export const useCatStore = create<TCatStoreState>()(
       return `There are ${total} cats in total. `;
     },
 	}))
-);
+));
 
 // N.B: Immer middleware call function
 
