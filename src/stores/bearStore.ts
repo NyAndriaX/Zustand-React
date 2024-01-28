@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 type TBearStoreState = {
-  bears:number,
+  bears:number;
   increasePopulation:() => void;
   removeAllBears: () => void;
 }

@@ -1,12 +1,12 @@
-import { BearBox } from './components/BearBox'
+import CatBox from './components/CatBox'
+// import { BearBox } from './components/BearBox'
 import './App.css'
 
 function App() {
-
   return (
     <div className='container'>
-      <p>zustand</p>
-      <BearBox/>
+      <h2>zustand</h2>
+      <CatBox/>
     </div>
   )
 }
